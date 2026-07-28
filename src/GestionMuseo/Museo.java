@@ -68,38 +68,6 @@ public class Museo {
         return true;
     }
 
-    public boolean registrarExposicion(Exposicion e){
 
-        if(e == null){
-
-            return false;
-        }
-
-        if(!salas.containsKey(e.getSala())){
-
-            return false;
-        }
-
-        ArrayList<Obra> obras = salas.get(e.getSala());
-
-        if(!obras.contains(e.getObra())){
-
-            return false;
-        }
-
-        if(e.getDias() <= 0){
-
-            return false;
-        }
-
-        if(exposiciones.contains(e)){
-
-            return false;
-        }
-
-        exposiciones.add(e);
-
-        return true;
-    }
 
 }
